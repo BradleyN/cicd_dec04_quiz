@@ -9,17 +9,16 @@ jobs:
   Deploy:
       runs-on: ubuntu-latest
       permissions:
-        pages: read,write
+        pages: read, write
         id-token: write
+        
       steps:
         - name: Download Pages artifact
           uses: actions/download-artifact@v4
           with:
             name: github-pages
+            path: ./sites
             github-token: ${{ github.token }}
 
         - name: deploy the artifacts
           uses: actions/deploy-pages@v4
-          
-    
-  
