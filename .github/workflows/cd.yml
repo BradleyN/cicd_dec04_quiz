@@ -1,6 +1,3 @@
-permissions:
-  actions: read
-
 on:
   workflow_run:
     workflows: ['CI']
@@ -12,7 +9,7 @@ jobs:
   Deploy:
       runs-on: ubuntu-latest
       permissions:
-        pages: write
+        pages: read,write
         id-token: write
       steps:
         - name: Download Pages artifact
