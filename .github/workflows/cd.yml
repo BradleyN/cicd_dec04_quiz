@@ -14,12 +14,5 @@ jobs:
         id-token: write
         
       steps:
-        - name: Download Pages artifact
-          uses: actions/download-artifact@v4
-          with:
-            name: github-pages
-            path: ./sites
-            github-token: ${{ secrets.GH_PAT }}
-
         - name: deploy the artifacts
           uses: actions/deploy-pages@v4
