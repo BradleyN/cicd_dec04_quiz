@@ -12,6 +12,11 @@ jobs:
         pages: write
         id-token: write
       steps:
+        - name: Download Pages artifact
+          uses: actions/download-pages-artifact@v4
+          with:
+            path: ./sites
+
         - name: deploy the artifacts
           uses: actions/deploy-pages@v4
     
