@@ -1,3 +1,6 @@
+permissions:
+  actions: read
+
 on:
   workflow_run:
     workflows: ['CI']
@@ -21,5 +24,6 @@ jobs:
 
         - name: deploy the artifacts
           uses: actions/deploy-pages@v4
+          
     
   
