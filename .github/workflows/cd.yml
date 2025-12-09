@@ -13,7 +13,7 @@ jobs:
       permissions:
         actions: read
         pages: read
-        id-token: read
+        id-token: write
         
       steps:
         - name: Checkout repository
