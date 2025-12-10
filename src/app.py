@@ -84,6 +84,7 @@ def sqrt(x):
     return np.sqrt(x)
 
 def complex_round(value):
+    #helper function for rounding complex numbers
     if isinstance(value, complex):
         real = round(value.real, 10)
         imag = round(value.imag, 10)
